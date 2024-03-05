@@ -13,6 +13,9 @@ import wandb
 import optuna
 
 def train(args, model, device, train_loader, optimizer, epoch):
+    """
+    train model
+    """
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
 
@@ -38,6 +41,9 @@ def train(args, model, device, train_loader, optimizer, epoch):
 
 
 def test(model, device, test_loader, epoch):
+    """
+    evaluate model
+    """
     model.eval()
     test_loss = 0
     correct = 0
